@@ -2,7 +2,6 @@
 import json
 import pandas as pd
 
-
 class ml:
 
     def __init__(self, screen):
