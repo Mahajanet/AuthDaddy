@@ -6,6 +6,7 @@ from ml import ml
 import math
 import random
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 #from sklearn.metrics import mean_absolute_error
 
@@ -50,7 +51,7 @@ class supervised_ml(ml):
         self.df.fillna(0,inplace=True)
         self.df["user"] = self.df["user"].astype(int)
     
-    def supervised_ml(self, deg=1):
+    def supervised_ml(self, deg=1, model="dt"):
         """
 
         Parameters
@@ -74,7 +75,9 @@ class supervised_ml(ml):
             X,y,test_size=0.2,random_state=42
         )
         
-        classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
+        if model.equals("dt"):
+            classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
+        elif model.equals()
         return (classifier.fit(self.X_train,self.y_train))
     
     def metrics(self):

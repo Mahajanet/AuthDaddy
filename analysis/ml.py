@@ -6,15 +6,14 @@ import pandas as pd
 class ml:
     def __init__(self, screen):
         print(screen)
-        # initialize matrices for start, end, error
-        self.start = []
-        self.end = []
-        self.error = []
+        # initialize dict for df
+        self.trials = {}
 
         # fill matrices for start, end, error
         self.parseJSON(screen)
-        self.df = pd.DataFrame(
-            {"start": self.start, "end": self.end, "error": self.error})
+        #self.df = pd.DataFrame(
+        #    {"start": self.start, "end": self.end, "error": self.error})
+        self.df = pd.DataFrame(self.trials)
 
     def parseJSON(self, screen):
         """
@@ -37,20 +36,25 @@ class ml:
         with open(screen, "r") as json_file:
             data = json.load(json_file)
 
-        b = 0
-        for row in data:
-            if row['key'] == 'b':
-                b += 1
-                self.error[b*-1] += 1
-            else:
-                if b == 0:
-                    self.start.append(row['timepressed'])
-                    self.end.append(row['timereleased'])
-                    self.error.append(0)
+        for i in range(len(data)):
+            entry = data[i]
+            self.trials[f"start{i}"] = []
+            self.trials[f"end{i}"] = []
+            self.trials[f"error{i}"] = []
+            b = 0
+            for row in entry:
+                if row['key'] == 'b':
+                    b += 1
+                    self.trials[f"error{i}"][b*-1] += 1
                 else:
-                    self.start[b*-1] = row['timepressed']
-                    self.end[b*-1] = row['timereleased']
-                    b -= 1
+                    if b == 0:
+                        self.trials[f"start{i}"].append(row['timepressed'])
+                        self.trials[f"end{i}"].append(row['timereleased'])
+                        self.trials[f"error{i}"].append(0)
+                    else:
+                        self.trials[f"start{i}"][b*-1] = row['timepressed']
+                        self.trials[f"end{i}"][b*-1] = row['timereleased']
+                        b -= 1
 
 
 if __name__ == "__main__":
