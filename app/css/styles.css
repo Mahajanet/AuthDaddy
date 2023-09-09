@@ -263,8 +263,8 @@
 
 .nav{
     position: relative;
-    right: -800px;
-    bottom: -300px;
+    right: 300px;
+    bottom: -150px;
     z-index: 2;
 }
 
@@ -290,3 +290,20 @@
     padding-right: 15px;
 }
 
+.icon:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    position: absolute;
+    left: -30px;
+    bottom: 50px;
+}
+
+.logo-img{
+    height: 100px;
+    width: 100px;
+    display: block;
+    border-radius: 50%;
+}
