@@ -1,0 +1,28 @@
+@import "../../app/css/globals.css";
+@import "../../app/css/variables.css";
+@import "../../app/css/nav.css";
+
+.center {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+.main-content{
+    background-color: aquamarine;
+}
+
+
+
+
+.form{
+    display: flex;
+    flex-direction:column;
+}
+
+.form-field{
+    display: flex;
+    
+}
+
