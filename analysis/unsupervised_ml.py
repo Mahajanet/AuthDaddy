@@ -18,6 +18,36 @@ class UnsupervisedML:
         self.mahalanobis_dist(last_row)
         self.GMM(last_row)
 
+    def select_best_model(self, training_trials, training_outputs):
+        SVM_entries = []
+        PCA_entries = []
+        maha_entries = []
+        GMM = []
+
+        for row in training_trials:
+            SVM_entries.append(self.one_class_SVM(row))
+            PCA_entries.append(self.PCA(row))
+            maha_entries.append(self.mahalanobis_dist(row))
+            GMM.append(self.GMM(row))
+
+        SVM_err = self.penalty(SVM_entries, training_outputs)
+        PCA_err = self.penalty(PCA_entries, training_outputs)
+        maha_err = self.penalty(PCA_entries, training_outputs)
+        GMM_err = self.penalty(GMM, training_outputs)
+
+        if SVM_err == min(SVM_err, PCA_err, maha_err, GMM_err):
+            return
+        elif PCA_err == min(SVM_err, PCA_err, maha_err, GMM_err):
+            return
+        elif maha_err == min(SVM_err, PCA_err, maha_err, GMM_err):
+            return
+        else:
+            return
+
+    @staticmethod
+    def penalty(result, expected):
+        return sum([res - exp for res, exp in zip(result, expected)])
+
     def one_class_SVM(self, vector):
         # Fit a One-Class SVM model
         svm_model = OneClassSVM(nu=0.05)  # Adjust the 'nu' hyperparameter as needed
@@ -28,7 +58,9 @@ class UnsupervisedML:
 
         outlier_probability = norm.cdf(distance_score)
 
-        print(f"Outlier Probability: {outlier_probability}")
+        return outlier_probability
+
+        # print(f"Outlier Probability: {outlier_probability}")
 
     def PCA(self, vector):
         # Fit a PCA model to your data
@@ -49,7 +81,9 @@ class UnsupervisedML:
         # You can adjust this conversion based on your data distribution and needs
         outlier_probability = 1.0 - np.exp(-reconstruction_error)
 
-        print(f"Outlier Probability: {outlier_probability}")
+        return outlier_probability
+
+        # print(f"Outlier Probability: {outlier_probability}")
 
     def mahalanobis_dist(self, vector):
         # Calculate the mean and covariance matrix of the data vectors
@@ -66,7 +100,9 @@ class UnsupervisedML:
         # Convert Mahalanobis distance to an outlier probability
         outlier_probability = 1.0 - chi2.cdf(mahalanobis_distance ** 2, df_chi2)
 
-        print(f"Outlier Probability: {outlier_probability}")
+        return outlier_probability
+
+        # print(f"Outlier Probability: {outlier_probability}")
 
     def GMM(self, vector):
         gmm = GaussianMixture(n_components=2)  # You can adjust the number of components
@@ -76,6 +112,8 @@ class UnsupervisedML:
         log_prob = gmm.score_samples([vector])
 
         # Calculate the outlier probability (normalized percentile rank)
-        outlier_prob = len(log_prob[log_prob <= log_prob[0]]) / len(log_prob)
+        outlier_probability = len(log_prob[log_prob <= log_prob[0]]) / len(log_prob)
 
-        print(f"Outlier Probability: {outlier_prob}")
+        return outlier_probability
+
+        # print(f"Outlier Probability: {outlier_probability}")
