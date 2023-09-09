@@ -1,36 +1,46 @@
-const counterSpan = document.getElementById("counter");
-const counterForm = document.getElementById("form");
-const submitButton = document.getElementById("submit");
-const messageElement = document.getElementById("message");
-const textInput = document.getElementById("password");
-let counterValue = parseInt(counterSpan.textContent);
+const registrationForm = document.getElementById("reg-form");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirmpassword");
+const errorElement = document.getElementById("error");
+const firstform = document.getElementById("firstform")
+const secondform = document.getElementById("secondform")
 
-// Function to decrement the counter value and handle the message and button removal
-function decrementCounter() {
-    counterValue--;
-    counterSpan.textContent = counterValue;
-    if (counterValue === 0) {
-        messageElement.textContent = "Thank you";
-        submitButton.style.display = "none"; // Hide the submit button
-    }
-    clearField();
-}
-
-// Event listener for form submission
-counterForm.addEventListener("submit", function (event) {
+// Registeration form code for submision
+registrationForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
-    decrementCounter();
-});
 
-// Event listener for Enter key press in the text input field
-textInput.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // Prevent Enter from submitting the form
-        decrementCounter();
+    const username = registrationForm.username.value;
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    // Password validation criteria
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (password !== confirmPassword) {
+        showError("Passwords do not match. Please try again.");
+        clearFields();
+    } else if (!password.match(passwordRegex)) {
+        showError("Password must be at least 8 characters long, and contain at least one uppercase letter, one number, and one special character (@$!%*?&).");
+        clearFields();
+    } else {
+        // Registration successful, you can send the data to the server or perform further actions here
+        errorElement.textContent = "";
+        //hides the first form to replace with biometrics 
+        firstform.style.display = "none";
+        //shows the second form that displays the biometrics
+        secondform.style.display = "block";
+        // Clear form inputs
+        registrationForm.reset();
     }
 });
 
-// Function to clear the input field
-function clearField() {
-    textInput.value = '';
+function showError(message) {
+    errorElement.textContent = message;
 }
+
+function clearFields() {
+    passwordInput.value = '';
+    confirmPasswordInput.value = '';
+}
+
+//Type Habits form code submission 
