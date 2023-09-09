@@ -1,11 +1,12 @@
 import numpy as np
 import pandas as pd
 
-def simulate_data(num_init, num_samples, num_hackers, password_length):
-    mean_press_time = 150  # Mean press time in milliseconds
-    std_deviation_press_time = 30  # Standard deviation of press time in milliseconds
-    mean_release_time = 50  # Mean release time in milliseconds
-    std_deviation_release_time = 10  # Standard deviation of release time in milliseconds
+def simulate_data(num_init, num_samples, num_hackers, password_length, mean_press_time=150, std_deviation_press_time = 30,
+                  mean_release_time=50, std_deviation_release_time=10):
+    # Mean press time in milliseconds
+    # Standard deviation of press time in milliseconds
+    # Mean release time in milliseconds
+    # Standard deviation of release time in milliseconds
 
     # Define parameters for the binomial distribution for hackers
     mean_press_time_hacker = np.random.randint(120, 180, num_hackers)  # Mean press time for each hacker

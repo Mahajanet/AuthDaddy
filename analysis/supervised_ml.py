@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import json
 import pandas as pd
 from ml import ml
+import simulated
 import math
 import random
 from sklearn.tree import DecisionTreeClassifier
@@ -12,8 +12,11 @@ from sklearn.model_selection import train_test_split
 
 
 class supervised_ml(ml):
-    def __init__(self, screen, deg, model="dt"):
-        super().__init__(screen)
+    def __init__(self, screen, deg, model="dt", import_df=False):
+        if not import_df:
+            super().__init__(screen)
+        else:
+            self.df = screen
         self.impute_df(deg)
         self.model = self.supervised_ml(model=model)
         
@@ -37,7 +40,7 @@ class supervised_ml(ml):
 
         """
         nchars = self.df.shape[1]/3
-        for i in range(nchars):
+        for i in range(int(nchars)):
             self.df[f"time{i}"] = self.df[f'end{i}'] - self.df[f'start{i}']
             self.df.drop(columns=[f"start{i}", f"end{i}"], inplace=True)
         
@@ -45,15 +48,15 @@ class supervised_ml(ml):
         # Random imputation
         for index, row in self.df.iterrows():
             track = {}
-            for i in range(nchars):
+            for i in range(int(nchars)):
                 track[f'time{i}'] = row[f"time{i}"] + random.uniform(-1*math.log(deg+1), math.log(deg+1))
                 track[f'error{i}'] = row[f"error{i}"] + random.uniform(-2,2)
-            track['user'] = 1
+            track['label'] = 1
             new_rows.append(track)
         
         self.df = self.df.append(new_rows, ignore_index=True)
         self.df.fillna(0,inplace=True)
-        self.df["user"] = self.df["user"].astype(int)
+        self.df["label"] = self.df["label"].astype(int)
     
     def supervised_ml(self, deg=1, model="dt"):
         """
@@ -70,7 +73,7 @@ class supervised_ml(ml):
         """
         
         # create X and y vectors
-        target = "user"
+        target = "label"
         X = self.df.drop(columns=[target], inplace=False)
         y = self.df[target]
         
@@ -79,9 +82,9 @@ class supervised_ml(ml):
             X,y,test_size=0.2,random_state=42
         )
         
-        if model.equals("dt"):
+        if model=="dt":
             classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
-        elif model.equals("log"):
+        elif model=="log":
             classifier = LogisticRegression(max_iter=1000)
         return (classifier.fit(self.X_train,self.y_train))
     
@@ -89,17 +92,36 @@ class supervised_ml(ml):
         mae = self.model.score(self.X_test, self.y_test)
         return mae
     
-    def make_prediction(self, file):
-        attempt = ml(file)
-        nchars = attempt.df.shape[1]/3
-        for i in range(nchars):
-            attempt.df[f"time{i}"] = attempt.df[f'end{i}'] - attempt.df[f'start{i}']
-            attempt.df.drop(columns=[f"start{i}", f"end{i}"], inplace=True)
-            attempt.df[f"error{i}"] = attempt.df[f"error{i}"].astype(int)
+    def opt_decision_tree
+    
+    def make_prediction(self, file, import_df=False):
+        if not import_df:
+            attempt = ml(file).df
+        else:
+            attempt = file
+        nchars = attempt.shape[1]/3
+        for i in range(int(nchars)):
+            attempt[f"time{i}"] = attempt[f'end{i}'] - attempt[f'start{i}']
+            attempt.drop(columns=[f"start{i}", f"end{i}"], inplace=True)
+            attempt[f"error{i}"] = attempt[f"error{i}"].astype(int)
 
-        predictions = self.model.predict(attempt.df)
-        return (int(sum(predictions))<3)
+        predictions = self.model.predict(attempt)
+        return predictions
     
 if __name__ == "__main__":
-    mlm = supervised_ml("data.txt", 2)
-    print(mlm.make_prediction("data.txt"))
+    data, test = simulated.simulate_data(10,30,3,10)
+    test['label'].replace({'Person': 0, 'Hacker': 1}, inplace=True)
+    mlm = supervised_ml(data, 2, import_df=True, model="dt")
+    #print(mlm.make_prediction("data.txt"))
+    pred = mlm.make_prediction(test.drop(columns='label'),import_df=True)
+    test = test['label'].tolist()
+
+    cor = 0
+    inc = 0
+    for i in range(len(test)):
+        if test[i] == pred[i]:
+            cor += 1
+        else:
+            inc += 1
+    print(cor)
+    print(inc)
