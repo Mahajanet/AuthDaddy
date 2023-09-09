@@ -92,7 +92,8 @@ class supervised_ml(ml):
         mae = self.model.score(self.X_test, self.y_test)
         return mae
     
-    def opt_decision_tree
+    def opt_decision_tree():
+        pass
     
     def make_prediction(self, file, import_df=False):
         if not import_df:
@@ -111,7 +112,7 @@ class supervised_ml(ml):
 if __name__ == "__main__":
     data, test = simulated.simulate_data(10,30,3,10)
     test['label'].replace({'Person': 0, 'Hacker': 1}, inplace=True)
-    mlm = supervised_ml(data, 2, import_df=True, model="dt")
+    mlm = supervised_ml(data, 10000, import_df=True, model="log")
     #print(mlm.make_prediction("data.txt"))
     pred = mlm.make_prediction(test.drop(columns='label'),import_df=True)
     test = test['label'].tolist()

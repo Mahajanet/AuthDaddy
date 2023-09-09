@@ -9,10 +9,14 @@ def simulate_data(num_init, num_samples, num_hackers, password_length, mean_pres
     # Standard deviation of release time in milliseconds
 
     # Define parameters for the binomial distribution for hackers
-    mean_press_time_hacker = np.random.randint(120, 180, num_hackers)  # Mean press time for each hacker
-    std_deviation_press_time_hacker = np.random.randint(20, 40, num_hackers)  # Std dev for press time
-    mean_release_time_hacker = np.random.randint(40, 60, num_hackers)  # Mean release time for each hacker
-    std_deviation_release_time_hacker = np.random.randint(8, 12, num_hackers)  # Std dev for release time
+    #mean_press_time_hacker = np.random.randint(120, 180, num_hackers)  # Mean press time for each hacker
+    #std_deviation_press_time_hacker = np.random.randint(20, 40, num_hackers)  # Std dev for press time
+    #mean_release_time_hacker = np.random.randint(40, 60, num_hackers)  # Mean release time for each hacker
+    #std_deviation_release_time_hacker = np.random.randint(8, 12, num_hackers)  # Std dev for release time
+    mean_press_time_hacker = np.random.randint(3000, 4000, num_hackers)
+    std_deviation_press_time_hacker = np.random.randint(1000, 2000, num_hackers)
+    mean_release_time_hacker = np.random.randint(4000, 6000, num_hackers)
+    std_deviation_release_time_hacker = np.random.randint(500, 600, num_hackers)
 
     # Simulate data for a person entering the password
     person_init = []
