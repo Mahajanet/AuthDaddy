@@ -62,7 +62,7 @@ const counterSpan = document.getElementById("counter");
 const bioForm = document.getElementById("bio-form");
 const submitButton = document.getElementById("submit-bio");
 const messageElement = document.getElementById("message");
-const textInput = document.getElementById("password-bio");
+const textInput = document.getElementById("passwordVerify");
 let counterValue = parseInt(counterSpan.textContent);
 
 
