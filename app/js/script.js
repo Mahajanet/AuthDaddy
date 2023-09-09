@@ -5,12 +5,19 @@ const errorElement = document.getElementById("error");
 const firstform = document.getElementById("firstform")
 const secondform = document.getElementById("secondform")
 
+function accessPassword(password){
+    return password.value;
+}
+
+var fix_password;
 // Registeration form code for submision
 registrationForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
     const username = registrationForm.username.value;
     const password = passwordInput.value;
+    fix_password = password;
+    
     const confirmPassword = confirmPasswordInput.value;
 
     // Password validation criteria
@@ -35,6 +42,7 @@ registrationForm.addEventListener("submit", function (event) {
     }
 });
 
+
 function showError(message) {
     errorElement.textContent = message;
 }
@@ -56,11 +64,11 @@ const submitButton = document.getElementById("submit-bio");
 const messageElement = document.getElementById("message");
 const textInput = document.getElementById("password-bio");
 let counterValue = parseInt(counterSpan.textContent);
-const newPassword = document.getElementById("password-bio");
+
 
 // Function to decrement the counter value and handle the message and button removal
 function decrementCounter() {
-    if (counterValue === 0) {
+    if (counterValue === 1) {
         secondform.style.display = "none";
 
     }
@@ -69,29 +77,26 @@ function decrementCounter() {
 }
 
 // Event listener for form submission
-bioForm.addEventListener("submit", function (event) {
-    
-    
-    event.preventDefault(); // Prevent form submission
-    decrementCounter();
-    clearField();
-    const password = passwordInput.value;
-    const newPassword = newPassword.value;
-    if (password !== newPassword) {
-        showError("Passwords do not match. Please try again.");
-        clearField(); }
-    else{
-        decrementCounter();
-        clearField();
-        }
-});
+bioForm.addEventListener("submit", function (event) {;
 
-// Event listener for Enter key press in the text input field
-textInput.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // Prevent Enter from submitting the form
+    event.preventDefault(); // Prevent form submission
+    const new_password = textInput.value;
+
+    if (fix_password !== new_password) {
+        messageElement.style.color = "red";
+        showMessage("Entry doesn't match the password you set. Please try again!");
+        clearField(); 
+    } else{
+        decrementCounter();
+        messageElement.style.color = "green";
+        showMessage("That's valid!");
+        clearField();
     }
 });
+
+function showMessage(message) {
+    messageElement.textContent = message;
+}
 
 // Function to clear the input field
 function clearField() {
