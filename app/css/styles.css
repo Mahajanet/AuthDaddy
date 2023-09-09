@@ -264,16 +264,29 @@
 .nav{
     position: relative;
     right: -800px;
-    bottom: -450px;
-    width: 30px;
-    height:200px;
-    z-index: 10;
-    background-color: rgb(84, 105, 212);
-    border-radius: 5%;
-    box-shadow: 2px 2px white;
+    bottom: -300px;
+    z-index: 2;
 }
 
 
 #third{
     display: none;
 }
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+}
+
+.icon{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 55%;
+    background-color: #5469d4;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
