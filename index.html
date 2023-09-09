@@ -55,13 +55,13 @@
           </div>
           <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
             <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-              <h1><a>AuthDaddy</a></h1>
+              <h1 class="heading-name"><a>AuthDaddy</a></h1>
             </div>
             <div class="formbg-outer">
               <div class="formbg">
                 <div class="formbg-inner padding-horizontal--48">
                   <span class="padding-bottom--15" style="text-align: center;">Set up your authentication by creating an account!</span>
-                  <form id="stripe-login">
+                  <form id="form">
                     <div class="field padding-bottom--24">
                       <label for="email">Email</label>
                       <input type="email" name="email">
@@ -70,13 +70,14 @@
                       <div class="grid--50-50">
                         <label for="password">Password</label>
                       </div>
-                      <input type="text" name="password">
+                      <input type="text" name="password" id="password">
                     </div>
                     <div class="field padding-bottom--24">
                       <input type="submit" name="submit" value="Submit">
                     </div>
                     <div class="field">
-                      <a class="counter" href="#">Type in your password 10 more times</a>
+                      <a class="counter" href="#">Type in your password <span id="counter">10</span> more times</a>
+                      <p id="message"></p>
                     </div>
                   </form>
                 </div>

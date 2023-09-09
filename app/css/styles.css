@@ -208,16 +208,16 @@
   }
   
   .animationRightLeft {
-    animation: animationRightLeft 10s ease-in-out infinite;
+    animation: animationRightLeft 100s ease-in-out infinite;
   }
   .animationLeftRight {
-    animation: animationLeftRight 10s ease-in-out infinite;
+    animation: animationLeftRight 100s ease-in-out infinite;
   }
   .tans3s {
-    animation: animationLeftRight 20s ease-in-out infinite;
+    animation: animationLeftRight 100s ease-in-out infinite;
   }
   .tans4s {
-    animation: animationLeftRight 30s ease-in-out infinite;
+    animation: animationLeftRight 100s ease-in-out infinite;
   }
   
   @keyframes animationLeftRight {
@@ -243,3 +243,7 @@
       transform: translateX(0px);
     }
   } 
+
+.heading-name{
+    color: rgb(84, 105, 212);
+}
