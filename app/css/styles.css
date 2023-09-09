@@ -259,3 +259,21 @@
 .counter-message{
     display: flex;
 }
+
+
+.nav{
+    position: relative;
+    right: -800px;
+    bottom: -450px;
+    width: 30px;
+    height:200px;
+    z-index: 10;
+    background-color: rgb(84, 105, 212);
+    border-radius: 5%;
+    box-shadow: 2px 2px white;
+}
+
+
+#third{
+    display: none;
+}

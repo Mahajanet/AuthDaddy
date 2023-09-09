@@ -64,12 +64,14 @@ const submitButton = document.getElementById("submit-bio");
 const messageElement = document.getElementById("message");
 const textInput = document.getElementById("passwordVerify");
 let counterValue = parseInt(counterSpan.textContent);
+const third = document.getElementById("third")
 
 
 // Function to decrement the counter value and handle the message and button removal
 function decrementCounter() {
     if (counterValue === 1) {
         secondform.style.display = "none";
+        third.style.display = "block"
 
     }
     counterValue--;
@@ -102,3 +104,4 @@ function showMessage(message) {
 function clearField() {
     textInput.value = '';
 }
+
