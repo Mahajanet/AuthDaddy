@@ -57,14 +57,15 @@
             <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
               <h1 class="heading-name"><a>AuthDaddy</a></h1>
             </div>
-            <div class="formbg-outer">
+            <!-- Registration form code starts here-->
+            <div class="formbg-outer" id="firstform">
               <div class="formbg">
                 <div class="formbg-inner padding-horizontal--48">
-                  <span class="padding-bottom--15" style="text-align: center;">Set up your authentication by creating an account!</span>
-                  <form id="form">
+                  <span class="padding-bottom--15" style="text-align: center;">Please register an account to get started!</span>
+                  <form id="reg-form">
                     <div class="field padding-bottom--24">
-                      <label for="email">Email</label>
-                      <input type="email" name="email">
+                      <label for="username">Username</label>
+                      <input type="text" name="username">
                     </div>
                     <div class="field padding-bottom--24">
                       <div class="grid--50-50">
@@ -73,15 +74,45 @@
                       <input type="text" name="password" id="password">
                     </div>
                     <div class="field padding-bottom--24">
+                        <div class="grid--50-50">
+                          <label for="confirmpassword">Confirm Password</label>
+                        </div>
+                        <input type="text" name="confirmpassword" id="confirmpassword">
+                      </div>
+                    <div class="field padding-bottom--24">
                       <input type="submit" name="submit" value="Submit">
                     </div>
-                    <div class="field">
-                      <a class="counter" href="#">Type in your password <span id="counter">10</span> more times</a>
-                      <p id="message"></p>
-                    </div>
+                    <p id="error" style="color: red;"></p>
                   </form>
                 </div>
               </div>
+            </div>
+            <!-- Biometrics form code starts here-->
+            <div class="formbg-outer" id="secondform">
+                <div class="formbg">
+                    <div class="formbg-inner padding-horizontal--48">
+                      <span class="padding-bottom--15" style="text-align: center;"></span>
+                      <form id="bio-form">
+                        <div class="field padding-bottom--24">
+                          <div class="grid--50-50">
+                            <label for="password">Password</label>
+                          </div>
+                          <input type="text" name="password" id="password">
+                        </div>
+                        <div class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="confirmpassword">Confirm Password</label>
+                            </div>
+                            <input type="text" name="confirmpassword" id="confirmpassword">
+                          </div>
+                        <div class="field padding-bottom--24">
+                          <input type="submit" name="submit" value="Submit">
+                        </div>
+                        <p id="error" style="color: red;"></p>
+                      </form>
+                    </div>
+                  </div>
+            
             </div>
           </div>
         </div>
