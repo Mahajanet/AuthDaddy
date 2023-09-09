@@ -248,3 +248,8 @@
 .heading-name{
     color: rgb(84, 105, 212);
 }
+
+#secondform{
+    height: 0;
+    width: 0;
+}

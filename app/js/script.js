@@ -28,7 +28,8 @@ registrationForm.addEventListener("submit", function (event) {
         //hides the first form to replace with biometrics 
         firstform.style.display = "none";
         //shows the second form that displays the biometrics
-        secondform.style.display = "block";
+        secondform.style.height = "100%";
+        secondform.style.width = "100%";
         // Clear form inputs
         registrationForm.reset();
     }
@@ -44,3 +45,55 @@ function clearFields() {
 }
 
 //Type Habits form code submission 
+//
+//
+//
+//
+//
+const counterSpan = document.getElementById("counter");
+const bioForm = document.getElementById("bio-form");
+const submitButton = document.getElementById("submit-bio");
+const messageElement = document.getElementById("message");
+const textInput = document.getElementById("password-bio");
+let counterValue = parseInt(counterSpan.textContent);
+const newPassword = document.getElementById("password-bio");
+
+// Function to decrement the counter value and handle the message and button removal
+function decrementCounter() {
+    if (counterValue === 0) {
+        secondform.style.display = "none";
+
+    }
+    counterValue--;
+    counterSpan.textContent = counterValue;
+}
+
+// Event listener for form submission
+bioForm.addEventListener("submit", function (event) {
+    
+    
+    event.preventDefault(); // Prevent form submission
+    decrementCounter();
+    clearField();
+    const password = passwordInput.value;
+    const newPassword = newPassword.value;
+    if (password !== newPassword) {
+        showError("Passwords do not match. Please try again.");
+        clearField(); }
+    else{
+        decrementCounter();
+        clearField();
+        }
+});
+
+// Event listener for Enter key press in the text input field
+textInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent Enter from submitting the form
+    }
+});
+
+// Function to clear the input field
+function clearField() {
+    textInput.value = '';
+}

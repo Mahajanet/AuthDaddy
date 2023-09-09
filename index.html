@@ -93,25 +93,22 @@
             <div class="formbg-outer" id="secondform">
                 <div class="formbg">
                     <div class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15" style="text-align: center;">Please re-enter your password ten times! This will tell us exactly how you type.</span>
                       <span class="padding-bottom--15" style="text-align: center;"></span>
                       <form id="bio-form">
                         <div class="field padding-bottom--24">
                           <div class="grid--50-50">
-                            <label for="password">Password</label>
+                            <label for="password-bio">Password</label>
                           </div>
-                          <input type="text" name="password" id="password">
+                          <input type="text" name="password-bio" id="password-bio">
                         </div>
                         <div class="field padding-bottom--24">
-                            <div class="grid--50-50">
-                              <label for="confirmpassword">Confirm Password</label>
-                            </div>
-                            <input type="text" name="confirmpassword" id="confirmpassword">
-                          </div>
-                        <div class="field padding-bottom--24">
-                          <input type="submit" name="submit" value="Submit">
+                            <input type="submit" name="submit-bio" id="submit-bio" value="Submit">
                         </div>
-                        <p id="error" style="color: red;"></p>
+                        <p id="error-bio" style="color: red;"></p>
                       </form>
+                      <p>Please enter your password<span id="counter">10</span>more times!</p>
+                      <p id="message">Thanks mate!</p>
                     </div>
                   </div>
             
