@@ -2,9 +2,10 @@
 import json
 import pandas as pd
 
-class ml:
 
+class ml:
     def __init__(self, screen):
+        print(screen)
         # initialize matrices for start, end, error
         self.start = []
         self.end = []
@@ -48,3 +49,8 @@ class ml:
                 else:
                     self.start[b*-1] = row['start']
                     self.start[b*-2] = row['end']
+
+
+if __name__ == "__main__":
+    ml = ml("./data.txt")
+    print(ml.df)
