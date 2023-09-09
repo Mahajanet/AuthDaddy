@@ -55,8 +55,8 @@ def simulate_data(num_init, num_samples, num_hackers, password_length):
     hacker_df = pd.DataFrame(hacker_data, columns=labels)
 
     # Add a label column to distinguish between person and hacker data
-    person_df["Label"] = "Person"
-    hacker_df["Label"] = "Hacker"
+    person_df["label"] = "Person"
+    hacker_df["label"] = "Hacker"
 
     # Concatenate the DataFrames
     combined_df = pd.concat([person_df, hacker_df], ignore_index=True)
@@ -73,5 +73,5 @@ def evaluate_tests():
     print(train)
     print(test)
 
-
-evaluate_tests()
+if __name__ == "__main__":
+    evaluate_tests()
