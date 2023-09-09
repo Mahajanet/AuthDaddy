@@ -12,10 +12,10 @@ from sklearn.model_selection import train_test_split
 
 
 class supervised_ml(ml):
-    def __init__(self, screen, deg):
+    def __init__(self, screen, deg, model="dt"):
         super().__init__(screen)
         self.impute_df(deg)
-        self.model = self.supervised_ml()
+        self.model = self.supervised_ml(model=model)
         
     def impute_df(self, deg):
         """
@@ -36,16 +36,20 @@ class supervised_ml(ml):
         False user matches using random data.
 
         """
-        self.df["time"] = self.df['end'] - self.df['start']
-        self.df.drop(columns=["start", "end"], inplace=True)
+        nchars = self.df.shape[1]/3
+        for i in range(nchars):
+            self.df[f"time{i}"] = self.df[f'end{i}'] - self.df[f'start{i}']
+            self.df.drop(columns=[f"start{i}", f"end{i}"], inplace=True)
         
         new_rows = []
-        
         # Random imputation
         for index, row in self.df.iterrows():
-            new_time = row["time"] + random.uniform(-1*math.log(deg+1), math.log(deg+1))
-            new_error = row["error"] + random.uniform(-2,2)
-            new_rows.append({'time':new_time, 'error':new_error, 'user':1})
+            track = {}
+            for i in range(nchars):
+                track[f'time{i}'] = row[f"time{i}"] + random.uniform(-1*math.log(deg+1), math.log(deg+1))
+                track[f'error{i}'] = row[f"error{i}"] + random.uniform(-2,2)
+            track['user'] = 1
+            new_rows.append(track)
         
         self.df = self.df.append(new_rows, ignore_index=True)
         self.df.fillna(0,inplace=True)
@@ -77,7 +81,8 @@ class supervised_ml(ml):
         
         if model.equals("dt"):
             classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
-        elif model.equals()
+        elif model.equals("log"):
+            classifier = LogisticRegression(max_iter=1000)
         return (classifier.fit(self.X_train,self.y_train))
     
     def metrics(self):
@@ -86,9 +91,11 @@ class supervised_ml(ml):
     
     def make_prediction(self, file):
         attempt = ml(file)
-        attempt.df["time"] = attempt.df['end'] - attempt.df['start']
-        attempt.df.drop(columns=["start", "end"], inplace=True)
-        attempt.df["error"] = attempt.df["error"].astype(int)
+        nchars = attempt.df.shape[1]/3
+        for i in range(nchars):
+            attempt.df[f"time{i}"] = attempt.df[f'end{i}'] - attempt.df[f'start{i}']
+            attempt.df.drop(columns=[f"start{i}", f"end{i}"], inplace=True)
+            attempt.df[f"error{i}"] = attempt.df[f"error{i}"].astype(int)
 
         predictions = self.model.predict(attempt.df)
         return (int(sum(predictions))<3)
