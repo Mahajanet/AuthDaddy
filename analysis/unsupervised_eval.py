@@ -11,12 +11,6 @@ class UnsupervisedML:
 
     def __init__(self, df):
         self.df = df
-        last_row = self.df.iloc[-1].squeeze()
-
-        self.one_class_SVM(last_row)
-        self.PCA(last_row)
-        self.mahalanobis_dist(last_row)
-        self.GMM(last_row)
 
     def select_best_model(self, training_trials, training_outputs):
         SVM_entries = []
@@ -30,23 +24,29 @@ class UnsupervisedML:
             maha_entries.append(self.mahalanobis_dist(row))
             GMM.append(self.GMM(row))
 
-        SVM_err = self.penalty(SVM_entries, training_outputs)
-        PCA_err = self.penalty(PCA_entries, training_outputs)
-        maha_err = self.penalty(PCA_entries, training_outputs)
-        GMM_err = self.penalty(GMM, training_outputs)
+        SVM_m = self.confusion_matrix(SVM_entries, training_outputs)
+        PCA_m = self.confusion_matrix(PCA_entries, training_outputs)
+        maha_m = self.confusion_matrix(PCA_entries, training_outputs)
+        GMM_m = self.confusion_matrix(GMM, training_outputs)
 
-        if SVM_err == min(SVM_err, PCA_err, maha_err, GMM_err):
-            return
-        elif PCA_err == min(SVM_err, PCA_err, maha_err, GMM_err):
-            return
-        elif maha_err == min(SVM_err, PCA_err, maha_err, GMM_err):
-            return
-        else:
-            return
+        print(SVM_m)
+        print(PCA_m)
+        print(maha_m)
+        print(GMM_m)
 
     @staticmethod
-    def penalty(result, expected):
-        return sum([res - exp for res, exp in zip(result, expected)])
+    def confusion_matrix(result, expected):
+        tp, fp, fn, tn = 0, 0, 0, 0
+        for idx in range(len(result)):
+            if result[idx] >= 0.5 and expected[idx] >= 1.0:
+                tp += 1
+            elif result[idx] < 0.5 and expected[idx] >= 1.0:
+                fp += 1
+            elif result[idx] >= 0.5 and expected[idx] <= 0.0:
+                fn += 1
+            else:
+                tn += 1
+        return {"true_positive": tp, "false_positive": fp, "false_negative": fn, "true_negative": tn}
 
     def one_class_SVM(self, vector):
         # Fit a One-Class SVM model
@@ -117,3 +117,74 @@ class UnsupervisedML:
         return outlier_probability
 
         # print(f"Outlier Probability: {outlier_probability}")
+
+def simulate_data(num_init, num_samples, num_hackers):
+    mean_press_time = 150  # Mean press time in milliseconds
+    std_deviation_press_time = 30  # Standard deviation of press time in milliseconds
+    mean_release_time = 50  # Mean release time in milliseconds
+    std_deviation_release_time = 10  # Standard deviation of release time in milliseconds
+
+    # Define parameters for the binomial distribution for hackers
+    mean_press_time_hacker = np.random.randint(120, 180, num_hackers)  # Mean press time for each hacker
+    std_deviation_press_time_hacker = np.random.randint(20, 40, num_hackers)  # Std dev for press time
+    mean_release_time_hacker = np.random.randint(40, 60, num_hackers)  # Mean release time for each hacker
+    std_deviation_release_time_hacker = np.random.randint(8, 12, num_hackers)  # Std dev for release time
+
+    # Simulate data for a person entering the password
+    person_init = []
+    for _ in range(num_init):
+        entry_vector = []
+        for char in range(10):
+            press_time = int(np.random.normal(mean_press_time, std_deviation_press_time)) + char * 200
+            release_time = int(np.random.normal(mean_release_time, std_deviation_release_time))
+            entry_vector.extend([char + 1, press_time, press_time + release_time])
+        person_init.append(entry_vector)
+
+    # Simulate data for a person entering the password
+    person_data = []
+    for _ in range(num_samples):
+        entry_vector = []
+        for char in range(10):
+            press_time = int(np.random.normal(mean_press_time, std_deviation_press_time)) + char*200
+            release_time = int(np.random.normal(mean_release_time, std_deviation_release_time))
+            entry_vector.extend([char + 1, press_time, press_time + release_time])
+        person_data.append(entry_vector)
+
+    # Simulate data for other people knowing the password with multimodal distribution
+    hacker_data = []
+    for _ in range(num_samples):
+        entry_vector = []
+        for char in range(10):
+            hacker_idx = np.random.randint(0, num_hackers)
+            press_time = int(
+                np.random.normal(mean_press_time_hacker[hacker_idx], std_deviation_press_time_hacker[hacker_idx])) + char*200
+            release_time = int(
+                np.random.normal(mean_release_time_hacker[hacker_idx], std_deviation_release_time_hacker[hacker_idx]))
+            entry_vector.extend([char + 1, press_time, press_time + release_time])
+        hacker_data.append(entry_vector)
+
+    init_df = pd.DataFrame(person_init, columns=["Char", "Press_Time", "Release_Time"] * 10)
+    person_df = pd.DataFrame(person_data, columns=["Char", "Press_Time", "Release_Time"] * 10)
+    hacker_df = pd.DataFrame(hacker_data, columns=["Char", "Press_Time", "Release_Time"] * 10)
+
+    # Add a label column to distinguish between person and hacker data
+    person_df["Label"] = "Person"
+    hacker_df["Label"] = "Hacker"
+
+    # Concatenate the DataFrames
+    combined_df = pd.concat([person_df, hacker_df], ignore_index=True)
+
+    # Shuffle the rows in the combined DataFrame
+    combined_df = combined_df.sample(frac=1).reset_index(drop=True)
+
+    # Print the first few rows of the combined DataFrame
+    print(combined_df.head())
+    return init_df, combined_df
+
+
+def evaluate_tests():
+    train, test = simulate_data(10, 50, 50)
+    print(train)
+    print(test)
+
+evaluate_tests()
