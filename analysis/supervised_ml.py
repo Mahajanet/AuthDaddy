@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import json
 import pandas as pd
 from ml import ml
 import math
 import random
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-
+#from sklearn.metrics import mean_absolute_error
 
 
 class supervised_ml(ml):
@@ -69,13 +70,26 @@ class supervised_ml(ml):
         y = self.df[target]
         
         # create train-test split
-        X_train, X_test, y_train, y_test = train_test_split(
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             X,y,test_size=0.2,random_state=42
         )
         
         classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
-        return (classifier.fit(X,y))
+        return (classifier.fit(self.X_train,self.y_train))
+    
+    def metrics(self):
+        mae = self.model.score(self.X_test, self.y_test)
+        return mae
+    
+    def make_prediction(self, file):
+        attempt = ml(file)
+        attempt.df["time"] = attempt.df['end'] - attempt.df['start']
+        attempt.df.drop(columns=["start", "end"], inplace=True)
+        attempt.df["error"] = attempt.df["error"].astype(int)
+
+        predictions = self.model.predict(attempt.df)
+        return (int(sum(predictions))<3)
     
 if __name__ == "__main__":
     mlm = supervised_ml("data.txt", 2)
-    print(mlm.model)
+    print(mlm.make_prediction("data.txt"))
