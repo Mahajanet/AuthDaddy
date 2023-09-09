@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import pandas as pd
-import ml
+from ml import ml
 import math
 import random
 from sklearn.tree import DecisionTreeClassifier
@@ -13,7 +13,7 @@ class supervised_ml(ml):
     def __init__(self, screen, deg):
         super().__init__(screen)
         self.impute_df(deg)
-        self.model = supervised_ml
+        self.model = self.supervised_ml()
         
     def impute_df(self, deg):
         """
@@ -45,11 +45,9 @@ class supervised_ml(ml):
             new_error = row["error"] + random.uniform(-2,2)
             new_rows.append({'time':new_time, 'error':new_error, 'user':1})
         
-        self.df.append(new_rows, ignore_index=True)
-        
-        return (
-            self.df.fillna(0,inplace=True).astype(int)
-        )
+        self.df = self.df.append(new_rows, ignore_index=True)
+        self.df.fillna(0,inplace=True)
+        self.df["user"] = self.df["user"].astype(int)
     
     def supervised_ml(self, deg=1):
         """
@@ -77,3 +75,7 @@ class supervised_ml(ml):
         
         classifier = DecisionTreeClassifier(max_depth=10, random_state=42)
         return (classifier.fit(X,y))
+    
+if __name__ == "__main__":
+    mlm = supervised_ml("data.txt", 2)
+    print(mlm.model)

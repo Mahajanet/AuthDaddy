@@ -44,13 +44,15 @@ class ml:
                 self.error[b*-1] += 1
             else:
                 if b == 0:
-                    self.start.append(row['start'])
-                    self.end.append(row['end'])
+                    self.start.append(row['timepressed'])
+                    self.end.append(row['timereleased'])
+                    self.error.append(0)
                 else:
-                    self.start[b*-1] = row['start']
-                    self.start[b*-2] = row['end']
+                    self.start[b*-1] = row['timepressed']
+                    self.end[b*-1] = row['timereleased']
+                    b -= 1
 
 
 if __name__ == "__main__":
-    ml = ml("./data.txt")
-    print(ml.df)
+    mlm = ml("data.txt")
+    print(mlm.df)
