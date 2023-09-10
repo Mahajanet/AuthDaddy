@@ -5,6 +5,7 @@ people = ["jvm" "leo" "marko" "mike"];
 recall_arr = [];
 precision_arr = [];
 p_arr = [];
+most_precise = 0
 
 for p_idx = 1:numel(sigvalues)
     p_arr = [p_arr, 0];
@@ -33,6 +34,12 @@ for p_idx = 1:numel(sigvalues)
         % precision - make a careful decision
         precision = model_cm(2,2) / (model_cm(1,2) + model_cm(2,2));
         precision_arr = [precision_arr, precision];
+
+        if recall >= 0.30 && precision > most_precise
+            most_precise = precision;
+            % 0.1450, 9 has best precision within recall
+            % 0.0550, 9 has good recall (50%) and very precise
+        end
     end
 end
 

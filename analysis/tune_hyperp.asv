@@ -5,10 +5,14 @@ people = ["jvm" "leo" "marko" "mike"];
 recall_arr = [];
 precision_arr = [];
 p_arr = [];
+most_precise = 0
 
 for p_idx = 1:numel(sigvalues)
+    p_arr = [p_arr, 0];
     sigvalue = sigvalues(p_idx);
     for k_idx = 1:numel(kvalues)
+        p_arr(p_idx) = p_arr(p_idx) + 1;
+
         kvalue = kvalues(k_idx);
         model_cm = [0 0;0 0];
         for pers_idx = 1:numel(people)
@@ -30,8 +34,16 @@ for p_idx = 1:numel(sigvalues)
         % precision - make a careful decision
         precision = model_cm(2,2) / (model_cm(1,2) + model_cm(2,2));
         precision_arr = [precision_arr, precision];
+
+        if recall >= 0.30 && precision > most_precise
+            most_precise = precision
+            % 0.1450, 9 has best precision within recall
+            % 
+        end
     end
 end
+
+
 
 function conf_matrix = compute_conf(name, avgs, stds, sigvalue, kvalue, people)
     % trials are the json strings for the test data

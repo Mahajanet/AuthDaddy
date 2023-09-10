@@ -1,6 +1,8 @@
-function pass = pass_trial(avgs, stds, jsonStr, significance, count_threshold)
+function pass = pass_trial(avgs, stds, jsonStr)
     % we optimize the significance and count_threshold - these are our
     % hyperparameters
+    significance = 0.0550;
+    count_threshold = 9;
 
     % jsonStr = fileread('sample.txt');
     jsonTrial = jsondecode(jsonStr);

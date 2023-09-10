@@ -1,0 +1,20 @@
+{
+  "name": "authdaddy",
+  "version": "1.0.0",
+  "description": "[![GitHub Repository](https://img.shields.io/badge/GitHub-Explore%20the%20Code-blue?logo=github)](https://github.com/Mahajanet/AuthDaddy)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahajanet/AuthDaddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahajanet/AuthDaddy/issues"
+  },
+  "homepage": "https://github.com/Mahajanet/AuthDaddy#readme"
+}
