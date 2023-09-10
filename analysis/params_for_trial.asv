@@ -11,23 +11,18 @@ function lambdas = params_for_trial(biometrics)
 
     % iterate through the trials
     for idx = 1:numel(biometrics)
-        % forward-fill empty values
         if (isempty(biometrics(1, idx).timereleased))
             timeReleased(1, idx) = biometrics(1, idx).timepressed + 100;
         else
             timeReleased(1, idx) = biometrics(1, idx).timereleased;
         end
         timePressed(1, idx) = biometrics(1, idx).timepressed;
-        % handle backspace logic early
         if biometrics(1, idx).key == "Backspace"
             backcount.increment();
         end
     end
 
-    % subtract arrays to get time b/w keys being pressed
     keyPress = timeReleased - timePressed;
-    % get difference of timePressed values to get time b/w
-    % each key getting pressed
     keyJump = diff(timePressed);
 
     lambdas = [];

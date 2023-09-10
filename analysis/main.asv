@@ -8,10 +8,8 @@ jsonData = jsondecode(jsonStr);
 NVARS = 9;
 NTRIALS = 10;
 
-% we prepopulate a table with zeros
-% it has each of the variables and mean/std dev associated
-% with the vars
-% aux = zeros(NVARS, NTRIALS);
+% we cegne
+%aux = zeros(NVARS, NTRIALS);
 variableNames = {'avgPress', 'avgJump', 'stdPress', 'stdJump', 'nBack', ...
                 'longPress', 'shortPress', 'longJump', 'shortJump'};
 userProfile = table('Size', [NTRIALS, NVARS], 'VariableTypes', ...
@@ -34,6 +32,5 @@ if isstruct(jsonData) && numel(jsonData) == (NVARS+1)*(NTRIALS+1)
     end
 end
 
-% avgs and stds are saved for future use
 avgs = mean(userProfile, 1);
 stds = std(userProfile, 0);
