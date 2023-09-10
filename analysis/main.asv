@@ -21,20 +21,16 @@ if isstruct(jsonData) && numel(jsonData) == (NVARS+1)*(NTRIALS+1)
 
             % check if result is valid size
             if isequal(size(result), [1, NVARS])
-                userProfile(listIndex) = result;
+                userProfile(rowIdx, :) = num2cell(result);
             end
         end
     end
 end
 
 avgs = mean(userProfile, 1);
-stds = std(userProfile, 1);
+stds = std(userProfile, 0);
 
-for idx = 1:NVARS
-    name = variableNames(idx);
-    avgs.add(mean(userProfile.name))
-    stds.add(std(userProfile.name))
-end
+
 
 % function - new trial, means, std - construct an x% confidence interval, k
 % params, whether trial passes or not
