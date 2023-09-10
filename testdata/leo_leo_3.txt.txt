@@ -1,0 +1,1054 @@
+[
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314545714,
+      "timereleased": 1694314545836
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314545815,
+      "timereleased": 1694314545930
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314546068,
+      "timereleased": 1694314546448
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314546272,
+      "timereleased": 1694314546356
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314546555,
+      "timereleased": 1694314546620
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314546662,
+      "timereleased": 1694314546760
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314546741,
+      "timereleased": 1694314546825
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314546952,
+      "timereleased": 1694314547056
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314546978,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547201,
+      "timereleased": 1694314547320
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547294,
+      "timereleased": 1694314547345
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547402,
+      "timereleased": 1694314547501
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547440,
+      "timereleased": 1694314547519
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314547639,
+      "timereleased": 1694314547763
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547689,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547808,
+      "timereleased": 1694314547907
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314547955,
+      "timereleased": 1694314548127
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314548087,
+      "timereleased": 1694314548220
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314548418,
+      "timereleased": 1694314548700
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314548535,
+      "timereleased": 1694314548617
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314548762,
+      "timereleased": 1694314548826
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314548853,
+      "timereleased": 1694314548938
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314548926,
+      "timereleased": 1694314549016
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314549086,
+      "timereleased": 1694314549225
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549139,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549385,
+      "timereleased": 1694314549487
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549479,
+      "timereleased": 1694314549530
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549577,
+      "timereleased": 1694314549661
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549629,
+      "timereleased": 1694314549705
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314549827,
+      "timereleased": 1694314549947
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549876,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314549997,
+      "timereleased": 1694314550104
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550124,
+      "timereleased": 1694314550250
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550196,
+      "timereleased": 1694314550292
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550527,
+      "timereleased": 1694314550608
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314550769,
+      "timereleased": 1694314552792
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550788,
+      "timereleased": 1694314550861
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550863,
+      "timereleased": 1694314550973
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314550971,
+      "timereleased": 1694314551057
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314551173,
+      "timereleased": 1694314551241
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314551306,
+      "timereleased": 1694314551387
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314551418,
+      "timereleased": 1694314551485
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314551560,
+      "timereleased": 1694314551610
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314551702,
+      "timereleased": 1694314551729
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314551750,
+      "timereleased": 1694314551869
+    },
+    {
+      "key": "Backspace",
+      "keyType": "Backspace",
+      "timepressed": 1694314552169,
+      "timereleased": 1694314552236
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314552335,
+      "timereleased": 1694314552434
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314552580,
+      "timereleased": 1694314552688
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314552894,
+      "timereleased": 1694314552976
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314552978,
+      "timereleased": 1694314553060
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553074,
+      "timereleased": 1694314553168
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314553238,
+      "timereleased": 1694314553356
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553271,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553510,
+      "timereleased": 1694314553628
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553598,
+      "timereleased": 1694314553653
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553715,
+      "timereleased": 1694314553813
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314553776,
+      "timereleased": 1694314553862
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314553977,
+      "timereleased": 1694314554104
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314554047,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314554146,
+      "timereleased": 1694314554245
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314554288,
+      "timereleased": 1694314554427
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314554352,
+      "timereleased": 1694314554464
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314554624,
+      "timereleased": 1694314554867
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314554707,
+      "timereleased": 1694314554783
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555006,
+      "timereleased": 1694314555093
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555088,
+      "timereleased": 1694314555202
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555203,
+      "timereleased": 1694314555294
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314555367,
+      "timereleased": 1694314555491
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555397,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555652,
+      "timereleased": 1694314555777
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555751,
+      "timereleased": 1694314555803
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555820,
+      "timereleased": 1694314555911
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314555994,
+      "timereleased": 1694314556102
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314556470,
+      "timereleased": 1694314556605
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314556547,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314556652,
+      "timereleased": 1694314556751
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314556797,
+      "timereleased": 1694314556934
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314556868,
+      "timereleased": 1694314556978
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314557142,
+      "timereleased": 1694314557625
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314557434,
+      "timereleased": 1694314557529
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314557714,
+      "timereleased": 1694314557778
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314557820,
+      "timereleased": 1694314557913
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314557902,
+      "timereleased": 1694314557994
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314558063,
+      "timereleased": 1694314558251
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558157,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558435,
+      "timereleased": 1694314558541
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558521,
+      "timereleased": 1694314558568
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558629,
+      "timereleased": 1694314558735
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558680,
+      "timereleased": 1694314558777
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314558876,
+      "timereleased": 1694314559017
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314558965,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559054,
+      "timereleased": 1694314559151
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559162,
+      "timereleased": 1694314559293
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559233,
+      "timereleased": 1694314559336
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314559494,
+      "timereleased": 1694314559750
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559572,
+      "timereleased": 1694314559656
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559801,
+      "timereleased": 1694314559886
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559907,
+      "timereleased": 1694314559989
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314559979,
+      "timereleased": 1694314560077
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314560148,
+      "timereleased": 1694314560264
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560176,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560420,
+      "timereleased": 1694314560526
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560512,
+      "timereleased": 1694314560559
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560605,
+      "timereleased": 1694314560702
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560670,
+      "timereleased": 1694314560768
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314560873,
+      "timereleased": 1694314560972
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314560930,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314561021,
+      "timereleased": 1694314561117
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314561208,
+      "timereleased": 1694314561332
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314561275,
+      "timereleased": 1694314561392
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314561827,
+      "timereleased": 1694314562080
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314561903,
+      "timereleased": 1694314561986
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562182,
+      "timereleased": 1694314562266
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562253,
+      "timereleased": 1694314562352
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562358,
+      "timereleased": 1694314562442
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314562521,
+      "timereleased": 1694314562701
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562601,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562851,
+      "timereleased": 1694314562968
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314562944,
+      "timereleased": 1694314563011
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563060,
+      "timereleased": 1694314563159
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563138,
+      "timereleased": 1694314563234
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314563322,
+      "timereleased": 1694314563486
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563408,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563594,
+      "timereleased": 1694314563684
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563747,
+      "timereleased": 1694314563892
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314563835,
+      "timereleased": 1694314563951
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314564132,
+      "timereleased": 1694314564383
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314564209,
+      "timereleased": 1694314564285
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314564440,
+      "timereleased": 1694314564519
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314564568,
+      "timereleased": 1694314564667
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314564662,
+      "timereleased": 1694314564762
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314564839,
+      "timereleased": 1694314564943
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314564865,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565117,
+      "timereleased": 1694314565203
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565190,
+      "timereleased": 1694314565252
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565317,
+      "timereleased": 1694314565419
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565370,
+      "timereleased": 1694314565458
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314565569,
+      "timereleased": 1694314565700
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565631,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565761,
+      "timereleased": 1694314565855
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565875,
+      "timereleased": 1694314566020
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314565986,
+      "timereleased": 1694314566091
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314566264,
+      "timereleased": 1694314566751
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314566551,
+      "timereleased": 1694314566656
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314566834,
+      "timereleased": 1694314566917
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314566954,
+      "timereleased": 1694314567067
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567073,
+      "timereleased": 1694314567165
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314567235,
+      "timereleased": 1694314567384
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567280,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567539,
+      "timereleased": 1694314567667
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567641,
+      "timereleased": 1694314567701
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567761,
+      "timereleased": 1694314567870
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314567825,
+      "timereleased": 1694314567919
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314568029,
+      "timereleased": 1694314568169
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314568069,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314568229,
+      "timereleased": 1694314568335
+    }
+  ],
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314568410,
+      "timereleased": 1694314568561
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314568502,
+      "timereleased": 1694314568606
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314568774,
+      "timereleased": 1694314569119
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314568917,
+      "timereleased": 1694314569019
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569210,
+      "timereleased": 1694314569286
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569317,
+      "timereleased": 1694314569400
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569390,
+      "timereleased": 1694314569476
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694314569550,
+      "timereleased": 1694314569705
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569595,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569873,
+      "timereleased": 1694314569970
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314569936,
+      "timereleased": 1694314570004
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314570058,
+      "timereleased": 1694314570157
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314570122,
+      "timereleased": 1694314570206
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694314570310,
+      "timereleased": 1694314570418
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314570359,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694314570486,
+      "timereleased": null
+    }
+  ]
+]

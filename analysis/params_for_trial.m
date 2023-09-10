@@ -20,7 +20,7 @@ function lambdas = params_for_trial(biometrics)
         timePressed(1, idx) = biometrics(1, idx).timepressed;
         % handle backspace logic early
         if biometrics(1, idx).key == "Backspace"
-            backcount.increment();
+            backcount = backcount + 1;
         end
     end
 
