@@ -1,0 +1,55 @@
+function lambdas = params_for_trial(biometrics)
+    listSize
+    timeReleased = [];
+    timePressed = [];
+    keys = [];
+    backcount = 0;
+
+    for idx = 1:numel(biometrics)
+        if isNull(biometrics(1, idx).timereleased)
+            timeReleased = [timeReleased, biometrics(1, idx).timepressed + 100];
+        else
+            timeReleased = [timeReleased, biometrics(1, idx).timereleased];
+        end
+        timePressed = [timePressed, biometrics(1, idx).timepressed];
+        if biometrics(1, idx).key == "Backspace"
+            backcount.increment();
+        end
+    end
+    timeReleased
+    timePressed
+    keys
+
+    keyPress = timeReleased - timePressed;
+    keyJump = diff(timePressed);
+
+    lambdas = [];
+
+    % avg time per key press
+    lambdas = [lambdas, mean(keyPress)];
+    
+    % avg time between key presses
+    lambdas = [lambdas, mean(keyJump)];
+    
+    % std time per key press
+    lambdas = [lambdas, std(keyPress)];
+    
+    % std time between key presses
+    lambdas = [lambdas, std(keyJump)];
+    
+    % number of back spaces
+    lambdas = [lambdas, backcount];
+    
+    % longest key press (intra)
+    lambdas = [lambdas, max(keyPress)];
+    
+    % shortest key press
+    lambdas = [lambdas, min(keyPress)];
+    
+    % biggest jump (inter)
+    lambdas = [lambdas, max(keyJump)];
+    
+    % shortest jump
+    lambdas = [lambdas, min(keyJump)];
+
+end

@@ -1,0 +1,70 @@
+[
+  [
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287766419,
+      "timereleased": 1694287766498
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287766558,
+      "timereleased": 1694287766674
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287766634,
+      "timereleased": 1694287766728
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287766806,
+      "timereleased": 1694287766894
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287766983,
+      "timereleased": 1694287767059
+    },
+    {
+      "key": "CapsLock",
+      "keyType": "CapsLock",
+      "timepressed": 1694287767334,
+      "timereleased": 1694287767498
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287767420,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287767564,
+      "timereleased": 1694287767649
+    },
+    {
+      "key": "Shift",
+      "keyType": "Shift",
+      "timepressed": 1694287767780,
+      "timereleased": 1694287767920
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287767881,
+      "timereleased": null
+    },
+    {
+      "key": "Null",
+      "keyType": "Null",
+      "timepressed": 1694287768019,
+      "timereleased": 1694287768099
+    }
+  ]
+]
