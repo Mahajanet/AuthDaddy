@@ -1,4 +1,7 @@
-jsonStr = fileread('leokeystrokes.txt');
+function weights = main(jsonName)
+
+% jsonStr = fileread('leokeystrokes.txt');
+jsonStr = fileread(jsonName);
 jsonData = jsondecode(jsonStr);
 % JSON code is generated when the user fills the password fields
 % JS sends JSON to this matlab script
@@ -37,3 +40,5 @@ end
 % avgs and stds are saved for future use
 avgs = mean(userProfile, 1);
 stds = std(userProfile, 0);
+
+weights = [avgs;stds];
