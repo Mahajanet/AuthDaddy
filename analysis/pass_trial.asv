@@ -1,4 +1,4 @@
-function passes = pass_trial(avgs, stds, jsonStr, prob_threshold, count_threshold)
+function pass = pass_trial(avgs, stds, jsonStr, prob_threshold, count_threshold)
 
     % jsonStr = fileread('sample.txt');
     jsonTrial = jsondecode(jsonStr);
@@ -14,7 +14,8 @@ function passes = pass_trial(avgs, stds, jsonStr, prob_threshold, count_threshol
     end
     
     if successful >= count_threshold
-        return TRUE
+        pass = 1;
     else 
+        pass = 0;
     end
 end

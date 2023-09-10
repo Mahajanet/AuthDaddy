@@ -29,10 +29,3 @@ end
 
 avgs = mean(userProfile, 1);
 stds = std(userProfile, 0);
-
-
-
-% function - new trial, means, std - construct an x% confidence interval, k
-% params, whether trial passes or not
-% iterate up to n times, for last time
-% function - new trial, earth mover
