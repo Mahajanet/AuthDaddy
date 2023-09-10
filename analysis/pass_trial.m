@@ -11,9 +11,13 @@ function pass = pass_trial(avgs, stds, jsonStr, significance, count_threshold)
     successful = 0;
     for idx = 1:numel(avgs)
         % we calculate the z score
-        vals(1, idx)
-        avgs{1, idx}
-        stds{1, idx}
+        % avgs{1, idx}
+        % stds{1, idx}
+        
+        if isnan(vals(1, idx))
+            continue
+        end
+
         z_score = (vals(1, idx) - avgs{1, idx}) / stds{1, idx};
         % then we calculate the percentile of the z score
         probability = normcdf(z_score);

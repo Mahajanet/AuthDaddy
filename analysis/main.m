@@ -5,7 +5,6 @@ function weights = main(jsonName)
     % JSON code is generated when the user fills the password fields
     % JS sends JSON to this matlab script
 
-    jsonData
 
     if isstruct(jsonData) && ~iscell(jsonData)
         jsonData = struct2cell(jsonData);
@@ -30,7 +29,6 @@ function weights = main(jsonName)
         currList = jsonData(rowIdx, :);
         currList = currList{1, 1};
         currList = currList';
-        currList
         % check if current list is a cell array (containing dict)
         if isstruct(currList)
             result = params_for_trial(currList);

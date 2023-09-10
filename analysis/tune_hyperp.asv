@@ -11,6 +11,7 @@ for p_idx = 1:numel(sigvalues)
             name = people(pers_idx);
             % instantiate model
             fStr = sprintf('../testdata/%s_%s_1.txt',name, name);
+            fStr
             % get avgs and stds
             weights = main(fStr);
             avgs = weights(1,:);
@@ -26,8 +27,8 @@ end
 function conf_matrix = compute_conf(name, avgs, stds, sigvalue, kvalue, people)
     % trials are the json strings for the test data
     % y is 0 or 1, it is the expected outcome
-    pred = [];
-    exp = [];
+    pred = []
+    exp = []
     for i = 1:numel(people)
          other = people(i);
          if (name == other)
