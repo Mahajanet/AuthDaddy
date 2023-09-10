@@ -44,7 +44,7 @@ Meet the talented undergraduate students from Rice University and the University
 
 ## Abstract
 
-AuthDaddy revolutionizes the concept of 2FA by eliminating the need for additional electronic devices and complex infrastructure. Traditional 2FA methods often result in excessive energy consumption due to server GET/POST requests, leaving a substantial carbon footprint. Moreover, they frequently involve physical tokens or smart cards, contributing to transportation costs and environmental waste.
+AuthDaddy revolutionizes the concept of 2FA by eliminating the need for multiple server requests, additional electronic devices, and complex infrastructure. Traditional 2FA methods often result in excessive energy consumption due to server GET/POST requests, waste user time and energy, and leaving a substantial carbon footprint. Moreover, they frequently involve physical tokens or smart cards, contributing to transportation costs and environmental waste.
 
 ### How It Works
 
@@ -72,7 +72,7 @@ AuthDaddy offers numerous advantages:
 
 - **Sustainability**: By reducing the reliance on additional hardware and minimizing server requests, AuthDaddy significantly decreases energy consumption and carbon emissions, making it an eco-friendly solution.
 
-- **User-Friendly**: Users are not burdened with the need for external devices or mobile apps, enhancing the user experience.
+- **User-Friendly**: Users are not burdened with the need for external devices or mobile apps, enhancing the user experience: saving time + energy. 
 
 - **Security**: Biometric typing patterns offer a robust and personalized authentication method, enhancing security.
 
