@@ -1,54 +1,83 @@
-<br />
-<div align="center">
-  <h2>AuthDaddy: 2FA Using Biometric Data</h2>
-  
-  <br/>
+# AuthDaddy: 2FA Using Biometric Data
 
-  <p align="center">
-    A PennApps XXIV (2023) project!
-    <br />
-    <a href="https://github.com/Mahajanet/AuthDaddy"><strong>Explore the code »</strong></a>
-  </p>
-</div>
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Explore%20the%20Code-blue?logo=github)](https://github.com/Mahajanet/AuthDaddy)
 
-<!-- TABLE OF CONTENTS -->
+AuthDaddy is a groundbreaking Two-Factor Authentication (2FA) solution developed during PennApps XXIV (2023). Unlike traditional 2FA systems that rely on multiple electronic devices and complex network infrastructure, AuthDaddy simplifies the authentication process by harnessing a user's unique biometric typing patterns. This innovative approach not only enhances security but also addresses critical environmental concerns associated with conventional 2FA methods.
+
+## Table of Contents
+
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Click to Expand</summary>
   <ol>
     <li><a href="#team">Team</a></li>
     <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#advantages">Advantages</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
-<!-- Team -->
 ## Team
-<p align="justify">
-  We are undergraduate students from Rice University and the University of Pennsylvania!
-</p>
-<p>
-  Michael Khalfin, Rice University, <a href="mailto:mlk15@rice.edu">mlk15@rice.edu</a><br>
-  Marko Tanevski, Rice University, <a href="mailto:mt102@rice.edu">mt102@rice.edu</a><br>
-  Jahnavi Mahajan, Rice University, <a href="mailto:jm139@rice.edu">jm139@rice.edu</a><br>
-  Leo Lungu, University of Pennsylvania / Queen Mary University of London, <a href="mailto:leolungu@sas.upenn.edu">leolungu@sas.upenn.edu</a>
-</p>
 
-<!-- Abstract -->
+Meet the talented undergraduate students from Rice University and the University of Pennsylvania who brought AuthDaddy to life:
+
+- **Michael Khalfin**
+  - School: Rice University
+  - Email: [mlk15@rice.edu](mailto:mlk15@rice.edu)
+  - LinkedIn: [Profile](https://www.linkedin.com/in/michael-khalfin-87551b20b/)
+
+- **Marko Tanevski**
+  - School: Rice University
+  - Email: [mt102@rice.edu](mailto:mt102@rice.edu)
+  - LinkedIn: [Profile](https://www.linkedin.com/in/marko-tanevski/)
+
+- **Jahnavi Mahajan**
+  - School: Rice University
+  - Email: [jm139@rice.edu](mailto:jm139@rice.edu)
+  - LinkedIn: [Profile](https://www.linkedin.com/in/jahnavi-mahajan-b97892251/)
+
+- **Leo Lungu**
+  - School: University of Pennsylvania
+  - Email: [leolungu@sas.upenn.edu](mailto:leolungu@sas.upenn.edu)
+  - LinkedIn: [Profile](https://www.linkedin.com/in/leonardlungu/)
+
 ## Abstract
-<div align="left">
-  <p align="justify">
-    Two-factor authentication (2FA) systems involve the use of multiple electronic devices and network infrastructure. Server GET/POST requests add up, contributing to 
-    cumulative energy usage. Other environmental drawbacks of 2FA are (1) they rely on data centers, so they leave a large carbon footprint; (2) sometimes they involve physical
-    hardware tokens, smart cards, or paper, which results in transportation costs and physical waste. To mitigate many of these environmental concerns, we created a 2FA system that
-    only uses one device. The web platform verifies a user's identity by generating a custom biometric profile based on a user's typing patterns. Next, the system verifies a user is
-    who they say they are by providing a stats-based API for other web platforms. No Duo Mobile required!
-  </p>
-</div>
 
-<!-- Acknowledgments -->
+AuthDaddy revolutionizes the concept of 2FA by eliminating the need for additional electronic devices and complex infrastructure. Traditional 2FA methods often result in excessive energy consumption due to server GET/POST requests, leaving a substantial carbon footprint. Moreover, they frequently involve physical tokens or smart cards, contributing to transportation costs and environmental waste.
+
+### How It Works
+
+AuthDaddy's innovative approach to 2FA relies on the following key principles:
+
+1. **Biometric Typing Patterns**: AuthDaddy generates a highly secure and custom biometric profile based on a user's unique typing patterns. This profile serves as a reliable identifier.
+
+2. **Stats-Based API**: The system provides a statistics-based API that seamlessly integrates with various web platforms. This API enables other web services to verify a user's identity without the need for traditional 2FA methods.
+
+### Technologies Used
+
+AuthDaddy was developed using a powerful combination of technologies, including:
+
+- **MATLAB**: MATLAB was instrumental in processing and analyzing the biometric typing patterns, ensuring the accuracy and security of user identification.
+
+- **JavaScript (JS)**: JavaScript played a crucial role in developing the interactive web platform, allowing users to seamlessly interact with AuthDaddy.
+
+- **HTML and CSS**: HTML and CSS were used to create the user interface, providing an intuitive and visually appealing experience.
+
+These technologies were vital in creating a robust and user-friendly 2FA solution.
+
+### Advantages
+
+AuthDaddy offers numerous advantages:
+
+- **Sustainability**: By reducing the reliance on additional hardware and minimizing server requests, AuthDaddy significantly decreases energy consumption and carbon emissions, making it an eco-friendly solution.
+
+- **User-Friendly**: Users are not burdened with the need for external devices or mobile apps, enhancing the user experience.
+
+- **Security**: Biometric typing patterns offer a robust and personalized authentication method, enhancing security.
+
 ## Acknowledgments
-<div align="left">
-  <p align="justify">
-    We would like to thank the entire PennApps team and sponsors! We had a blast this weekend.
-  </p>
-</div>
+
+We extend our heartfelt gratitude to the entire PennApps team and our generous sponsors for their unwavering support and encouragement during this exciting journey.
+
+[Explore the Code](https://github.com/Mahajanet/AuthDaddy)
