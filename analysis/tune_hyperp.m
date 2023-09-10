@@ -8,10 +8,9 @@ p_arr = [];
 most_precise = 0
 
 for p_idx = 1:numel(sigvalues)
-    p_arr = [p_arr, 0];
     sigvalue = sigvalues(p_idx);
     for k_idx = 1:numel(kvalues)
-        p_arr(p_idx) = p_arr(p_idx) + 1;
+        p_arr = [p_arr, p_idx];
 
         kvalue = kvalues(k_idx);
         model_cm = [0 0;0 0];
@@ -43,8 +42,22 @@ for p_idx = 1:numel(sigvalues)
     end
 end
 
+size(recall_arr)
+size(precision_arr)
 
+figure;
+plot(p_arr,recall_arr,'-o','DisplayName','Recall','LineWidth',1.5);
+hold on;
 
+plot(p_arr,precision_arr,'-s','DisplayName','Precision','LineWidth',1.5);
+
+xlabel('p');
+ylabel('Percentage');
+legend('Location', 'Best');
+title('Recall and Precision vs. p');
+grid on;
+
+hold off;
 function conf_matrix = compute_conf(name, avgs, stds, sigvalue, kvalue, people)
     % trials are the json strings for the test data
     % y is 0 or 1, it is the expected outcome
