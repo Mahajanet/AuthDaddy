@@ -1,6 +1,7 @@
 let keyData = [];
-
 let pressedKeys = {};
+let submitCount = 0;
+let currentDataArray = [];
 
 function getCurrentTimestamp() {
   return new Date().getTime();
@@ -54,16 +55,24 @@ passwordField.addEventListener("keydown", handleKeyDown);
 passwordField.addEventListener("keyup", handleKeyUp);
 
 function saveDataToFile() {
-  const jsonData = JSON.stringify(keyData, null, 2);
-  const blob = new Blob([jsonData], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "keypress_data.txt";
-  a.click();
-
+  currentDataArray.push(keyData);
   keyData = [];
+
+  submitCount++;
+
+  if (submitCount === 10) {
+    const jsonData = JSON.stringify(currentDataArray, null, 2);
+    const blob = new Blob([jsonData], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "keypress_data.txt";
+    a.click();
+
+    submitCount = 0;
+    currentDataArray = [];
+  }
 }
 
 document.getElementById("bio-form").addEventListener("submit", function (e) {
