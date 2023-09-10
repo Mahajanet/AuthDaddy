@@ -2,9 +2,16 @@ sigvalues = linspace(.005,.15,30);
 kvalues = [5 6 7 8 9];
 people = ["jvm" "leo" "marko" "mike"];
 
+recall_arr = [];
+precision_arr = [];
+p_arr = [];
+
 for p_idx = 1:numel(sigvalues)
+    p_arr = [p_arr, 0];
     sigvalue = sigvalues(p_idx);
     for k_idx = 1:numel(kvalues)
+        p_arr(p_idx) = p_arr(p_idx) + 1;
+
         kvalue = kvalues(k_idx);
         model_cm = [0 0;0 0];
         for pers_idx = 1:numel(people)
@@ -19,9 +26,17 @@ for p_idx = 1:numel(sigvalues)
             cm = compute_conf(name, avgs, stds, sigvalue, kvalue, people);
             model_cm = model_cm + cm;
         end
-        model_cm
+        % recall - you want to catch them all
+        recall = model_cm(2,2) / (model_cm(2,1) + model_cm(2,2));
+        recall_arr = [recall_arr, recall];
+
+        % precision - make a careful decision
+        precision = model_cm(2,2) / (model_cm(1,2) + model_cm(2,2));
+        precision_arr = [precision_arr, precision];
     end
 end
+
+
 
 function conf_matrix = compute_conf(name, avgs, stds, sigvalue, kvalue, people)
     % trials are the json strings for the test data
