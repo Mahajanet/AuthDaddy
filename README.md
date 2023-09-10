@@ -32,7 +32,7 @@ Meet the talented undergraduate students from Rice University and the University
   - Email: [jm139@rice.edu](mailto:jm139@rice.edu)
 
 - **Leo Lungu**
-  - School: University of Pennsylvania / Queen Mary University of London
+  - School: University of Pennsylvania
   - Email: [leolungu@sas.upenn.edu](mailto:leolungu@sas.upenn.edu)
 
 ## Abstract
